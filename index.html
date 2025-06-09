@@ -400,60 +400,67 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <div class="contact-form-heading" style="text-align:center; margin-bottom: 18px;">
-                        <p style="font-size: 1.2rem; color: var(--primary-color); font-weight: 500;">I'd love to hear from you! Fill out the form below and I'll get back to you soon.</p>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contactForm" name="feedback-form" method="POST" data-netlify="true">
-                            <!-- Netlify hidden input -->
-                            <input type="hidden" name="form-name" value="feedback-form" />
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                            </div>                           
-                          <button type="submit" class="btn btn-primary form-btn">Send Message</button>
-                        </form>
-                        
-                        <div id="thankYouMessage" style="display: none;">
-                            <div style="
-                                background: #f0f8ff;
-                                border: 1px solid var(--primary-color);
-                                padding: 30px;
-                                border-radius: 12px;
-                                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-                                text-align: center;
-                                max-width: 600px;
-                                margin: 0 auto;
-                                animation: fadeIn 0.5s ease-in-out;
-                            ">
-                            <h2 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h2>
-                            <p style="font-size: 1.1rem; color: #444;">Your message has been successfully sent. I'll be in touch with you shortly.</p>
-                            <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">Till then, You can also connect with me on <a href="https://www.linkedin.com/in/rahul155/" style="color: var(--primary-color); text-decoration: underline;">LinkedIn</a>.</p>
-                            <button onclick="window.location.reload()" style="
-                                margin-top: 20px;
-                                padding: 10px 20px;
-                                background-color: var(--primary-color);
-                                border: none;
-                                color: #fff;
-                                font-size: 1rem;
-                                border-radius: 6px;
-                                cursor: pointer;
-                                ">
-                                Go Back
-                                </button>
+  <div class="contact-form-heading" style="text-align:center; margin-bottom: 18px;">
+    <p style="font-size: 1.2rem; color: var(--primary-color); font-weight: 500;">
+      I'd love to hear from you! Fill out the form below and I'll get back to you soon.
+    </p>
+  </div>
+  <div class="contact-form">
+    <form name="feedback-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <!-- Netlify hidden fields -->
+      <input type="hidden" name="form-name" value="feedback-form" />
+      <p style="display:none;">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-btn">Send Message</button>
+    </form>
+
+    <div id="thankYouMessage" style="display: none;">
+      <div style="
+        background: #f0f8ff;
+        border: 1px solid var(--primary-color);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        animation: fadeIn 0.5s ease-in-out;">
+        <h2 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 10px;">Thank You!</h2>
+        <p style="font-size: 1.1rem; color: #444;">Your message has been successfully sent. I'll be in touch with you shortly.</p>
+        <p style="margin-top: 15px; font-size: 0.95rem; color: #777;">
+          Till then, You can also connect with me on
+          <a href="https://www.linkedin.com/in/rahul155/" style="color: var(--primary-color); text-decoration: underline;">LinkedIn</a>.
+        </p>
+        <button onclick="window.location.reload()" style="
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: var(--primary-color);
+          border: none;
+          color: #fff;
+          font-size: 1rem;
+          border-radius: 6px;
+          cursor: pointer;">
+          Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
             </div>
         </div>
     </section>

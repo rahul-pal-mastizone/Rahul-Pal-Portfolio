@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add animation classes to elements when they come into view
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-item, .education-item, .certification-item, .info-item');
+        const elements = document.querySelectorAll('.timeline-item, .project-card, .skill-item, .education-item, .certification-item, .info-item, .contact-item');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;

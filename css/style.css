@@ -684,6 +684,18 @@
   }
   
   /* Contact Section */
+
+    .contact-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .contact-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .contact {
     background-color: var(--background-color);
   }

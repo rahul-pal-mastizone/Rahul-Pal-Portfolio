@@ -25,6 +25,11 @@
     color: white;
     overflow-x: hidden;
   }
+
+  /*Fixed Scroll issue from here*/
+  html{
+    overflow-x: hidden; 
+  }
   
   a {
     text-decoration: none;
